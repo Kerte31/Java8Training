@@ -25,9 +25,6 @@ public class Masina implements Vandabila, Inchiriabila {
         culoare = nouaCuloare;
     }
 
-    public Masina() {
-
-    }
 
     public String getMarca() {
         return marca;

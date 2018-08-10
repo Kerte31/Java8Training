@@ -5,7 +5,6 @@
  */
 package autoservice;
 
-import static autoservice.Masina.Culoare.RED;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -24,8 +23,8 @@ public class MasinaTest {
     @Test
     public void testGetMarca() {
         System.out.println("getMarca");
-        Masina instance = new Masina();
-        String expResult = null;
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
+        String expResult = "MERCEDES";
         String result = instance.getMarca();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -38,8 +37,8 @@ public class MasinaTest {
     @Test
     public void testSetMarca() {
         System.out.println("setMarca");
-        String marca = "MERCEDES";
-        Masina instance = new Masina();
+        String marca = "";
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
         instance.setMarca(marca);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -51,8 +50,8 @@ public class MasinaTest {
     @Test
     public void testGetVitezaMaxima() {
         System.out.println("getVitezaMaxima");
-        Masina instance = new Masina();
-        int expResult = 0;
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
+        int expResult = 260;
         int result = instance.getVitezaMaxima();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -65,8 +64,8 @@ public class MasinaTest {
     @Test
     public void testSetVitezaMaxima() {
         System.out.println("setVitezaMaxima");
-        int vitezaMaxima = 260;
-        Masina instance = new Masina();
+        int vitezaMaxima = 0;
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
         instance.setVitezaMaxima(vitezaMaxima);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -78,8 +77,8 @@ public class MasinaTest {
     @Test
     public void testGetCuloare() {
         System.out.println("getCuloare");
-        Masina instance = new Masina();
-        Masina.Culoare expResult = null;
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
+        Masina.Culoare expResult = Masina.Culoare.BLUE;
         Masina.Culoare result = instance.getCuloare();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -92,8 +91,8 @@ public class MasinaTest {
     @Test
     public void testSetCuloare() {
         System.out.println("setCuloare");
-        Masina.Culoare culoare = RED;
-        Masina instance = new Masina();
+        Masina.Culoare culoare = null;
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
         instance.setCuloare(culoare);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -105,7 +104,7 @@ public class MasinaTest {
     @Test
     public void testGetPretVanzare() {
         System.out.println("getPretVanzare");
-        Masina instance = new Masina();
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
         int expResult = 12000;
         int result = instance.getPretVanzare();
         assertEquals(expResult, result);
@@ -119,13 +118,12 @@ public class MasinaTest {
     @Test
     public void testGetPretInchirierePeZi() {
         System.out.println("getPretInchirierePeZi");
-        Masina instance = new Masina();
+        Masina instance = new Masina("MERCEDES",260,Masina.Culoare.BLUE);
         int expResult = 25;
         int result = instance.getPretInchirierePeZi();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-
     
 }
